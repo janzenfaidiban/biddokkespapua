@@ -16,13 +16,13 @@ class RoleSeeder extends Seeder
         Role::create([
             'name' => 'admin',
             'guard_name' => 'web',
-            'desc' => 'Akun utama sebagai pengelola sistem secara keseluruhan.',
+            'desc' => 'Akun utama sebagai pengelola sistem secara keseluruhan termasuk mengelola data dasar dan data anggota.',
         ]);
 
         Role::create([
-            'name' => 'operator',
+            'name' => 'pimpinan',
             'guard_name' => 'web',
-            'desc' => 'Akun operator di tingkat daerahan yang bertugas untuk mengelola data jemaat dan kegiatan di wilayahnya.',
+            'desc' => 'Akun pimpinan yang bertugas untuk melihat laporan data dan mengawasi sistem informasi.',
         ]);
         
     }

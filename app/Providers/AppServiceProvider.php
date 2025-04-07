@@ -47,12 +47,16 @@ class AppServiceProvider extends ServiceProvider
             view()->share([
 
                 // site information
-                'siteTitle' => 'Si-OBH Dokkes Papua',
-                'siteDescription' => 'Sistem Informasi Distribusi Obat dan Alat Kesehatan',
-                'author' => 'Nokensoft.com',
+                'siteTitle' => 'Si-PMKRI Jayapura',
+                'siteDescription' => 'Sistem Informasi Pemuda Katolik Republik Indonesia Cabang Jayapura',
+
+                'siteLogo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Logo_PMKRI_Nasional.png/1200px-Logo_PMKRI_Nasional.png',
+                'siteFavicon' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Logo_PMKRI_Nasional.png/1200px-Logo_PMKRI_Nasional.png',
+
+                'author' => 'Avelinus Korey',
 
                 // site copyright info
-                'siteCopyright' => '<script>document.write(new Date().getFullYear())</script> &copy; Si-OBH Dokkes Papua - Powered by <a href="https://nokensoft.com" target="_blank">Nokensoft.com</a>',
+                'siteCopyright' => '<script>document.write(new Date().getFullYear())</script> &copy; Si-PMKRI Jayapura - Dikembangkan oleh by <a href="https://github.com/AvelinusKorey" target="_blank">Avelinus Korey</a>',
                 
                 // footer links
                 'footerLinks' => 'footerLinks',

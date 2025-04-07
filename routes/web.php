@@ -27,8 +27,8 @@ Route::group(['middleware' => ['auth']], function () {
 
         if ($user->hasRole('admin')) {
             return redirect('/admin/dasbor');
-        } elseif ($user->hasRole('operator')) {
-            return redirect('/operator/dasbor');
+        } elseif ($user->hasRole('pimpinan')) {
+            return redirect('/pimpinan/dasbor');
         } 
 
         return redirect('/login'); // Default jika tidak ada role
@@ -47,12 +47,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/profil', [AdminDasborController::class, 'profil'])->name('admin.profil');
 
         
-        require 'admin/barang.php';
-        require 'admin/poliklinik.php';
-        require 'admin/barang.php';
-        require 'admin/barangmasuk.php';
-        require 'admin/barangkeluar.php';
-        require 'admin/usulanbarang.php';
+        require 'admin/anggota.php';
 
     });
     
