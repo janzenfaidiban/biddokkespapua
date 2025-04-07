@@ -34,7 +34,7 @@ class BarangController extends Controller
         }
 
         // Urutkan berdasarkan nama_barang ascending
-        $datas = $query->orderBy('nama_barang', 'asc')->get();
+        $datas = $query->orderBy('nama_barang', 'asc')->paginate(10);
 
         // Hitung jumlah data yang di-soft delete
         $totalOnlyTrashed = Barang::onlyTrashed()->count();
@@ -44,7 +44,7 @@ class BarangController extends Controller
 
         // Teks untuk judul dan deskripsi halaman
         $pageTitle = 'Data Barang';
-        $pageDescription = 'Daftar barang yang tersedia di poliklinik.';
+        $pageDescription = 'Data master semua barang yang terdata pada sistem. Admin dapat mengelola data-data barang ini. Setiap item barang memiliki nama barang, kategori (obat atau barang habis pakai), harga satuan, dan keterangan. Hak kelola admin: tambah, lihat detail, ubah data, pindahkan data ke tempat sampah, mengembalikan data dari tempat sampah, pencarian data dan menghapus data secara permanen.';
 
         return view('admin.barang.index', compact(
             'pageTitle',
@@ -57,12 +57,9 @@ class BarangController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->all());
-
         $request->validate([
             'nama_barang' => 'required|string|max:255',
             'kategori' => 'required|in:obat,bhp',
-            'stok' => 'required|integer|min:0',
             'harga_satuan' => 'required|integer|min:0',
             'keterangan' => 'nullable|string',
         ]);
@@ -83,7 +80,6 @@ class BarangController extends Controller
         $request->validate([
             'nama_barang' => 'required|string|max:255',
             'kategori' => 'required|in:obat,bhp',
-            'stok' => 'required|integer|min:0',
             'harga_satuan' => 'required|integer|min:0',
             'keterangan' => 'nullable|string',
         ]);

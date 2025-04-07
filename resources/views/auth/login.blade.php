@@ -46,14 +46,14 @@
                                 <hr>
                                 <div class="text-center">
                                     <span id="datetime"></span>
-                                    <p class="text-muted my-3">Gunakan alamat email dan kata sandi untuk mengakses database.</p>
+                                    <p class="text-muted my-3">Gunakan alamat email dan kata sandi untuk mengakses sistem.</p>
                                 </div>
 
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
 
                                     <div class="form-group mb-3">
-                                        <label for="emailaddress"><i class="fe-mail mr-1"></i> Alamat Email</label>
+                                        <label for="emailaddress">{!! $iconEmail !!} Alamat Email</label>
                                         <input type="text" id="emailaddress" name="email" class="form-control form-control-lg" placeholder="Alamat email">
 
                                         @error('email')
@@ -62,7 +62,7 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <label for="password"><i class="fe-lock mr-1"></i> Kata Sandi</label>
+                                        <label for="password">{!! $iconKataSandi !!} Kata Sandi</label>
                                         <div class="input-group input-group-merge">
                                             <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Kata Sandi">
                                             <div class="input-group-append" data-password="false">
@@ -78,7 +78,7 @@
 
                                     <div class="form-group mb-0">
                                         <button class="btn btn-primary btn-lg w-100" type="submit"> 
-                                            <i class="fe-log-in mr-1"></i> Login
+                                            {!! $iconLogin !!} Login
                                         </button>
                                     </div>
 

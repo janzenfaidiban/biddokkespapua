@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('nama_barang');
             $table->enum('kategori', ['obat', 'bhp']); // enum manual
-            $table->integer('stok')->default(0);
             $table->integer('harga_satuan')->default(0);
             $table->text('keterangan')->nullable();
             $table->timestamps();

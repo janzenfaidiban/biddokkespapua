@@ -48,7 +48,6 @@
                                                 <th>No</th>
                                                 <th>Nama Barang</th>
                                                 <th>Kategori</th>
-                                                <th>Stok</th>
                                                 <th>Harga Satuan</th>
                                                 <th>Keterangan</th>
                                                 <th></th>
@@ -60,7 +59,6 @@
                                                 <td>{{++$i}}</td>
                                                 <td>{{ $data->nama_barang ?? ''}}</td>
                                                 <td>{{ $data->kategori ?? ''}}</td>
-                                                <td>{{ $data->stok ?? ''}}</td>
                                                 <td>{{ $data->harga_satuan ?? ''}}</td>
                                                 <td>{{ $data->keterangan ?? ''}}</td>
 
@@ -85,7 +83,6 @@
                                                 :fields="[
                                                     ['name' => 'nama_barang', 'label' => 'Nama Barang'],
                                                     ['name' => 'kategori', 'label' => 'Kategori', 'type' => 'select', 'options' => ['obat' => 'Obat', 'bhp' => 'Bahan Habis Pakai']],
-                                                    ['name' => 'stok', 'label' => 'Stok', 'type' => 'number', 'min' => 0],
                                                     ['name' => 'harga_satuan', 'label' => 'Harga Satuan', 'type' => 'number', 'min' => 0],
                                                     ['name' => 'keterangan', 'label' => 'Keterangan', 'type' => 'textarea'],
                                                 ]"
@@ -98,7 +95,6 @@
                                                 :items="[
                                                     'Nama Barang' => $data->nama_barang,
                                                     'Kategori' => $data->kategori,
-                                                    'Stok' => $data->stok,
                                                     'Harga Satuan' => $data->harga_satuan,
                                                     'Keterangan' => $data->keterangan,
                                                     'Dibuat' => \Carbon\Carbon::parse($data->created_at)->translatedFormat('l, d F Y H:i'),
@@ -133,7 +129,7 @@
                                     </table>
 
                                     <div class="mt-3">
-                                        {{-- {{ $datas->links() }} --}}
+                                        {{ $datas->links() }}
                                     </div>
 
                                 </div>
@@ -166,7 +162,6 @@
         :fields="[
             ['name' => 'nama_barang', 'label' => 'Nama Barang'],
             ['name' => 'kategori', 'label' => 'Kategori', 'type' => 'select', 'options' => ['obat' => 'Obat', 'bhp' => 'Bahan Habis Pakai']],
-            ['name' => 'stok', 'label' => 'Stok', 'type' => 'number', 'min' => 0, 'value' => 0],
             ['name' => 'harga_satuan', 'label' => 'Harga Satuan', 'type' => 'number', 'min' => 0, 'value' => 0],
             ['name' => 'keterangan', 'label' => 'Keterangan', 'type' => 'textarea'],
         ]"

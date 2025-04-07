@@ -46,15 +46,13 @@ class AppServiceProvider extends ServiceProvider
             // Your super fun database stuff
             view()->share([
 
-                // menu wilayah
-                // 'topbarmenu_dropdown_wilayahs' => Wilayah::first('id')->all(),
-                // 'topbarmenu_dropdown_klasiss' => Klasis::first('id')->all(),
-
                 // site information
-                'siteTitle' => 'Database GKI Klasis Waibu Moi',
+                'siteTitle' => 'Si-OBH Dokkes Papua',
+                'siteDescription' => 'Sistem Informasi Distribusi Obat dan Alat Kesehatan',
+                'author' => 'Nokensoft.com',
 
                 // site copyright info
-                'siteCopyright' => '<script>document.write(new Date().getFullYear())</script> &copy; Database Online GKI Klasis Waibu Moi - Didukung dan dikembangkan oleh <a href="https://nokensoft.com" target="_blank">Nokensoft.com</a>',
+                'siteCopyright' => '<script>document.write(new Date().getFullYear())</script> &copy; Si-OBH Dokkes Papua - Powered by <a href="https://nokensoft.com" target="_blank">Nokensoft.com</a>',
                 
                 // footer links
                 'footerLinks' => 'footerLinks',
@@ -72,30 +70,40 @@ class AppServiceProvider extends ServiceProvider
                 'iconTombolKembalikan' => '<i class="fe-arrow-left"></i>',
                 'iconTombolHapus' => '<i class="fe-trash-2"></i>',
                 'iconTombolHapusPermanen' => '<i class="fe-trash"></i>',
+                'iconLogin' => '<i class="fe-log-in"></i>',
+                'iconEmail' => '<i class="fe-mail"></i>',
+                'iconKataSandi' => '<i class="fe-lock"></i>',
                 
                 
-                'iconHalamanLogin' => '<i class="fe-lock"></i>',
-                'iconHalamanBeranda' => '<i class="fe-home"></i>',
-                'iconHalamanKeluarga' => '<i class="fe-users"></i>',
-                'iconHalamanFaq' => '<i class="fe-help-circle"></i>',
-                'iconHalamanPanduan' => '<i class="fe-book-open"></i>',
-                'iconHalamanPetaSitus' => '<i class="fe-map"></i>',
-                'iconHalamanHakCipta' => '<i class="fe-star"></i>',
-                'iconHalamanSyaratKetentuan' => '<i class="fe-alert-triangle"></i>',
+                'iconLogin' => '<i class="fe-lock"></i>',
+                'iconBeranda' => '<i class="fe-home"></i>',
+                'iconFaq' => '<i class="fe-help-circle"></i>',
+                'iconPanduan' => '<i class="fe-book-open"></i>',
+                'iconPetaSitus' => '<i class="fe-map"></i>',
+                'iconHakCipta' => '<i class="fe-star"></i>',
+                'iconSyaratKetentuan' => '<i class="fe-alert-triangle"></i>',
 
+                // emoji
+                'emojiTambah' => '➕',
+                'emojiUbah' => '✏️',
+                'emojiSampah' => '🗑️',
+                'emojiHapusPermanen' => '❌',
+                'emojiDetail' => '🔍',
+                'emojiCari' => '🔎',
+                'emojiBerhasil' => '✅',
+                'emojiGagal' => '❌',
+                'emojiPeringatan' => '⚠️',
+                'emojiInfo' => 'ℹ️',
+                'emojiProses' => '⏳',
+                'emojiUnggah' => '⬆️',
+                'emojiUnduh' => '📥',
+                'emojiDataBarang' => '📦',
+                'emojiBarangMasuk' => '📥',
+                'emojiBarangKeluar' => '📤',
+                'emojiUsulan' => '📋',
+                'emojiKonfirmasi' => '✅',
+                'emojiRiwayat' => '📅',
 
-
-
-                // media sosial
-                'linkContohInstagram' => 'https://instagram.com/gkiefatadosay',
-                'linkContohFacebook' => 'https://facebook.com/gkiefatadosay',
-                'linkContohWaChannel' => 'https://whatsapp.com/channel/0029VaeL5uo5PO0vdDy3rW2T',
-                'linkContohYoutube' => 'https://youtube.com/@gkiefatadosay',
-
-
-                // template file
-                'linkTemplateStrukturOrganisasi' => 'https://docs.google.com/spreadsheets/d/1VBdAA3I-oDKsreZzHG_jVrDzlJSwhIf0cldj2Dp_KAk/edit?usp=sharing',
-                'linkTemplateSaranaPrasarana' => 'https://docs.google.com/spreadsheets/d/1pHcgbqaUrF_xy4nRQ0kcBIkESXNTeIRtyOvKA1reRKQ/edit?usp=sharing',
 
             ]);
         } catch (\Exception $e) {

@@ -133,37 +133,37 @@
 
                     <li class="nav-item">
                         <a class="nav-link @if(Request::segment(2) == '' || Request::segment(2) == 'dasbor') text-primary @endif" href="{{ route('admin.dasbor') }}">
-                            <i class="fe-home mr-1"></i> Dasbor
+                            <i class="fe-home"></i> Dasbor
                         </a>
                     </li> <!-- end nav item-->
 
                     <li class="nav-item">
                         <a class="nav-link @if(Request::segment(2) == 'poliklinik') text-primary @endif" href="{{ route('admin.poliklinik.index') }}">
-                            <i class="fe-layers mr-1"></i> Poliklinik 
+                            <i class="fe-layers"></i> Poliklinik 
                         </a>
                     </li> <!-- end nav item-->
 
                     <li class="nav-item">
                         <a class="nav-link @if(Request::segment(2) == 'barang') text-primary @endif" href="{{ route('admin.barang.index') }}">
-                            <i class="fe-box mr-1"></i> Barang
+                            <i class="fe-box"></i> Barang
                         </a>
                     </li> <!-- end nav item-->
 
                     <li class="nav-item">
                         <a class="nav-link @if(Request::segment(2) == 'barangmasuk') text-primary @endif" href="{{ route('admin.barangmasuk.index') }}">
-                            <i class="fe-log-in mr-1"></i> Barang Masuk
+                            <i class="fe-log-in"></i> Barang Masuk
                         </a>
                     </li> <!-- end nav item-->
 
                     <li class="nav-item">
                         <a class="nav-link @if(Request::segment(2) == 'barangkeluar') text-primary @endif" href="{{ route('admin.barangkeluar.index') }}">
-                            <i class="fe-log-out mr-1"></i> Barang Keluar
+                            <i class="fe-log-out"></i> Barang Keluar
                         </a>
                     </li> <!-- end nav item-->
 
                     <li class="nav-item">
                         <a class="nav-link @if(Request::segment(2) == 'usulanbarang') text-primary @endif" href="{{ route('admin.usulanbarang.index') }}">
-                            <i class="fe-navigation mr-1"></i> Usulan Barang dari Poliklinik <sup class="text-primary">(10 baru masuk)</sup>
+                            <i class="fe-navigation"></i> Usulan Barang dari Poliklinik <sup class="text-primary">(10 baru masuk)</sup>
                         </a>
                     </li> <!-- end nav item-->
                     
@@ -186,13 +186,13 @@
 
                     <li class="nav-item">
                         <a class="nav-link @if(Request::segment(2) == '') text-primary @endif" href="{{ route('adminklasis.beranda') }}">
-                            <i class="fe-home mr-1"></i> item
+                            <i class="fe-home"></i> item
                         </a>
                     </li> <!-- end nav item-->
 
                     <li class="nav-item @if(Request::segment(2) == 'jemaat') active @endif">
                         <a class="nav-link @if(Request::segment(2) == 'jemaat') text-primary @endif" href="{{route('adminklasis.jemaat.index')}}">
-                            <i class="fa fa-church mr-1"></i> item
+                            <i class="fa fa-church"></i> item
                         </a>
                     </li> <!-- end nav item-->
 
@@ -225,8 +225,8 @@
             second: '2-digit' 
         };
         
-        const dateStr = `<i class="fe-calendar mr-1"></i> ${new Intl.DateTimeFormat('id-ID', dateOptions).format(now)}`;
-        const timeStr = `<i class="fe-clock mr-1"></i> ${new Intl.DateTimeFormat('id-ID', timeOptions).format(now)}`;
+        const dateStr = `<i class="fe-calendar"></i> ${new Intl.DateTimeFormat('id-ID', dateOptions).format(now)}`;
+        const timeStr = `<i class="fe-clock"></i> ${new Intl.DateTimeFormat('id-ID', timeOptions).format(now)}`;
         
         document.getElementById('datetime').innerHTML = `${dateStr} <span class="mx-2">|</span> ${timeStr}`;
     }

@@ -11,10 +11,10 @@
 
 @if (!$isTrash)
     <td class="text-right">
-        <button type="button" class="btn btn-outline-dark"
+        <button type="button" class="btn text-primary"
             data-toggle="modal"
             data-target="#detailModal{{ $data->id }}">
-            {!! $iconTombolDetail !!}
+            {!! $iconTombolDetail !!} Detail
         </button>
 
         <a href="#" class="btn"

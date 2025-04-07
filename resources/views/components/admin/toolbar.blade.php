@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-6">
-        <a href="#" class="btn btn-dark waves-effect waves-light" data-toggle="modal" data-target="#tambahModal">
+        <a href="#" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#tambahModal">
             {!! $iconTombolTambah !!} Tambah
         </a>
 
@@ -19,7 +19,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Pencarian data..." aria-label="Recipient's username" value="{{ request()->search ?? old('search') }}">
                     <div class="input-group-append">
-                        <button class="btn btn-dark waves-effect waves-light" type="submit">{!! $iconPencarian !!} Cari</button>
+                        <button class="btn btn-outline-primary waves-effect waves-light" type="submit">{!! $iconPencarian !!} Cari</button>
                     </div>
                 </div>
             </div>
