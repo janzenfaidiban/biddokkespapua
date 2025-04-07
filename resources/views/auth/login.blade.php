@@ -99,7 +99,7 @@
 
                             <div class="form-group mb-0">
                                 <button class="btn btn-black btn-lg w-100" type="submit"> 
-                                    🔐 Login
+                                    <i class="fas fa-paper-plane me-1"></i> Login
                                 </button>
                             </div>
 
